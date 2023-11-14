@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Livewire;
 
 use App\Models\Product;
 use Gloudemans\Shoppingcart\Facades\Cart;
@@ -36,6 +36,6 @@ class ProductsTable extends Component
             $this->quantity[$product_id],
             $product->price / 100,
         );
-        $this->emit('cart_updated');
+        $this->dispatch('cart_updated');
     }
 }

@@ -21,7 +21,7 @@
                 @else
                     <form wire:submit.prevent="addToCart({{ $product->id }})" action="" method="POST">
                         @csrf
-                        <input wire:model="quantity.{{ $product->id }}" type="number"
+                        <input wire:model.live="quantity.{{ $product->id }}" type="number"
                                class="text-sm sm:text-base px-2 pr-2 rounded-lg border border-gray-400 py-1 focus:outline-none focus:border-blue-400"
                                style="width: 50px"/>
                         <button type="submit"
