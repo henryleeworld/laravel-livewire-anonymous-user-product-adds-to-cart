@@ -17,7 +17,15 @@
             </td>
             <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500 text-sm leading-5">
                 @if ($cart->where('id', $product->id)->count())
-				    {{ trans('frontend.product.content.in_cart') }}
+                    <!--<button class="inline-flex items-center px-4 py-2 bg-red-600 text-white border border-transparent rounded-md" wire:click="delete('{{ $cart->where('id', $product->id)->first()->rowId }}')" onclick="confirm('{{ trans('frontend.product.content.are_you_sure') }}') || event.stopImmediatePropagation()">
+                            {{ trans('frontend.product.content.delete') }}
+                    </button>-->
+				    <!--<button class="inline-flex items-center px-4 py-2 bg-red-600 text-white border border-transparent rounded-md" wire:click="delete('{{ $cart->where('id', $product->id)->first()->rowId }}')" wire:confirm="{{ trans('frontend.product.content.are_you_sure') }}">
+                            {{ trans('frontend.product.content.delete') }}
+                    </button>-->
+				    <button class="inline-flex items-center px-4 py-2 bg-red-600 text-white border border-transparent rounded-md" wire:click="delete('{{ $cart->where('id', $product->id)->first()->rowId }}')" wire:confirm.prompt="{{ trans('frontend.product.content.are_you_sure_type_to_confirm', ['product_name' => $product->name]) }} |{{ $product->name }}">
+                            {{ trans('frontend.product.content.delete') }}
+                    </button>
                 @else
                     <form wire:submit.prevent="addToCart({{ $product->id }})" action="" method="POST">
                         @csrf

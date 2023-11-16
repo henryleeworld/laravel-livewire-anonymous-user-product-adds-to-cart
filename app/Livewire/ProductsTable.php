@@ -27,15 +27,21 @@ class ProductsTable extends Component
             compact('cart'));
     }
 
-    public function addToCart($product_id)
+    public function addToCart($productId)
     {		
-        $product = Product::findOrFail($product_id);
+        $product = Product::findOrFail($productId);
         Cart::add(
             $product->id,
             $product->name,
-            $this->quantity[$product_id],
+            $this->quantity[$productId],
             $product->price / 100,
         );
+        $this->dispatch('cart_updated');
+    }
+
+    public function delete($cartItemId)
+    {
+        Cart::remove($cartItemId);
         $this->dispatch('cart_updated');
     }
 }

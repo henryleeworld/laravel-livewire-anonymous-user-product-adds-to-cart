@@ -26,5 +26,5 @@ $ php artisan migrate --seed
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/5jPUHpD.gif)
+![](https://i.imgur.com/b2gHxxD.gif)
 > 把喜歡的商品加入購物車網站以後，不要急著馬上結帳，等一等，過個一個小時或幾天，之後再回頭看，就會覺得當下需要或想要的，其實已經沒有那麼有吸引力，不太需要購買了
