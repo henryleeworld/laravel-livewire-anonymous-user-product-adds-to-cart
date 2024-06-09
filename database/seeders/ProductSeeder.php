@@ -15,20 +15,20 @@ class ProductSeeder extends Seeder
     public function run()
     {
         Product::create([
-            'name' => 'Barbie',
-            'price' => 1999,
+            'name' => __('Rising Freedom Gundam Gundam Seed Freedom, Bandai Hobby HGCE 1/144 Scale Model Kit'),
+            'price' => 3300,
         ]);
         Product::create([
-            'name' => 'Lego',
-            'price' => 4999,
+            'name' => __('Immortal Justice Gundam Gundam Seed Freedom, Bandai Hobby HGCE 1/144 Scale Model Kit'),
+            'price' => 2600,
         ]);
         Product::create([
-            'name' => 'iPhone',
-            'price' => 109999,
+            'name' => __('Bandai Hobby - Mobile Suit Gundam Seed - Freedom Gundam, Bandai Spirits Master Grade SD Model Kit'),
+            'price' => 5100,
         ]);
         Product::create([
-            'name' => 'Samsung Galaxy Buds',
-            'price' => 19999,
+            'name' => __('Prize A Freedom Gundam (Bust Figure) Ichiban Kuji Mobile Suit Gundam SEED'),
+            'price' => 10800,
         ]);
     }
 }

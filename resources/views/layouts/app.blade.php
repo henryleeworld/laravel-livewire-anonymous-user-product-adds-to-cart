@@ -6,22 +6,23 @@
 
     <title>{{ config('app.name') }}</title>
 
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    @vite(['resources/css/app.css'])
     @livewireStyles
 </head>
 <body class="bg-gray-100">
-<div class="font-sans text-gray-900 antialiased">
-    <div class="flex flex-col sm:justify-center items-center pt-5 pb-5">
-        <h2 class="font-bold text-2xl">{{ config('app.name') }}</h2>
+    <div class="font-sans text-gray-900 antialiased">
+        <div class="flex flex-col sm:justify-center items-center pt-5 pb-5">
+            <h2 class="font-bold text-2xl">{{ config('app.name') }}</h2>
 
-        <div class="w-full sm:max-w-2xl mt-6 mb-6 px-6 py-8 bg-white shadow-md overflow-hidden sm:rounded-lg">
-            @livewire('cart-counter')
-            @yield('content')
+            <div class="w-full sm:max-w-2xl mt-6 mb-6 px-6 py-8 bg-white shadow-md overflow-hidden sm:rounded-lg">
+                @livewire('cart-counter')
+                @yield('content')
+            </div>
         </div>
     </div>
-</div>
-
-@livewireScripts
+    <!-- Scripts -->
+    @vite(['resources/js/app.js'])
+    @livewireScripts
 </body>
 </html>
