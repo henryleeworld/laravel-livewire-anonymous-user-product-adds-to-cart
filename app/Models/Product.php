@@ -9,5 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model implements Buyable
 {
+    /** @use HasFactory<\Database\Factories\ProductFactory> */
     use CanBeBought, HasFactory;
 }

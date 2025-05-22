@@ -1,4 +1,4 @@
-# Laravel 11 Livewire 匿名使用者商品加入購物車
+# Laravel 12 Livewire 匿名使用者商品加入購物車
 
 引入 hardevine 的 shoppingcart 套件來擴增匿名使用者商品加入購物車，有些人在使用網路購物時，習慣將店家購物車當待購清單，把心儀商品先丟進去，結帳前再登入挑選出真正想購買的物品下單。
 
@@ -20,11 +20,19 @@ $ php artisan key:generate
 ```sh
 $ php artisan migrate --seed
 ```
+- 執行安裝 Vite 和 Laravel 擴充套件引用的依賴項目。
+```sh
+$ npm install
+```
+- 執行正式環境版本化資源管道並編譯。
+```sh
+$ npm run build
+```
 - 在瀏覽器中輸入已定義的路由 URL 來訪問，例如：http://127.0.0.1:8000。
 - 你可以經由 `/` 來進行商品加入購物車。
 
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/OgWTRot.gif)
+![](https://i.imgur.com/diNSaPg.gif)
 > 把喜歡的商品加入購物車網站以後，不要急著馬上結帳，等一等，過個一個小時或幾天，之後再回頭看，就會覺得當下需要或想要的，其實已經沒有那麼有吸引力，不太需要購買了

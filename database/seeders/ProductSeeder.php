@@ -8,11 +8,9 @@ use Illuminate\Database\Seeder;
 class ProductSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
-     *
-     * @return void
+     * Run the database seeders.
      */
-    public function run()
+    public function run(): void
     {
         Product::create([
             'name' => __('Rising Freedom Gundam Gundam Seed Freedom, Bandai Hobby HGCE 1/144 Scale Model Kit'),
